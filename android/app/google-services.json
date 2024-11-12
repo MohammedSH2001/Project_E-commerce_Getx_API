@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795575695879",
+    "project_id": "suiko-shop",
+    "storage_bucket": "suiko-shop.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795575695879:android:6f8d7a506d5492deb088a2",
+        "android_client_info": {
+          "package_name": "com.example.flutter_api_getx_matjer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpHVAif4to8p3HSPWN7x8jv2z09dmtcCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
