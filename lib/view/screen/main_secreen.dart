@@ -21,7 +21,7 @@ class MainSecreen extends StatelessWidget {
           elevation: 0,
           backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
           title: Text(
-            controller.title[controller.currentIndex.value],
+            controller.title[controller.currentIndex.value].tr,
             style: TextStyle(
                 color: Get.isDarkMode ? Colors.white : Colors.white,
                 fontWeight: FontWeight.bold),

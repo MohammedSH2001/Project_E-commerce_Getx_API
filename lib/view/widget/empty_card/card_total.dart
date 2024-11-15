@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_getx_matjer/logic/controller/card_controller.dart';
+import 'package:flutter_api_getx_matjer/routes/routes.dart';
 import 'package:flutter_api_getx_matjer/utils/them.dart';
 import 'package:flutter_api_getx_matjer/view/widget/text_utils.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,9 @@ class CardTotal extends StatelessWidget {
                     elevation: 0,
                     backgroundColor: Get.isDarkMode ? pinkClr : mainColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.payMentSecreen);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [

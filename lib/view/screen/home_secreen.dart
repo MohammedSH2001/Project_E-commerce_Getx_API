@@ -25,25 +25,25 @@ class HomeSecreen extends StatelessWidget {
                   bottomRight: Radius.circular(20),
                 ),
               ),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 20.0, right: 20),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextUtils(
+                    const TextUtils(
                         text: "Find Your",
                         fontSize: 25,
                         fontWeight: FontWeight.normal,
                         color: Colors.white),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    TextUtils(
+                    const TextUtils(
                         text: "INSPIRATOIN",
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     SearchText(),

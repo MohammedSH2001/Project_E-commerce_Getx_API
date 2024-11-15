@@ -15,9 +15,9 @@ class MainController extends GetxController {
   ].obs;
 
   final title = [
-    "Suiko Shop",
-    "Catogrey",
-    "Favorites",
-    "Setting",
+    "Suiko Shop".tr,
+    "Catogrey".tr,
+    "Favorites".tr,
+    "Setting".tr,
   ].obs;
 }

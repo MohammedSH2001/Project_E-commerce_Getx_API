@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_getx_matjer/logic/controller/card_controller.dart';
+import 'package:flutter_api_getx_matjer/logic/controller/catogrey_controller.dart';
 import 'package:flutter_api_getx_matjer/logic/controller/product_controller.dart';
 import 'package:flutter_api_getx_matjer/model/model_product.dart';
 import 'package:flutter_api_getx_matjer/utils/them.dart';
@@ -7,74 +8,77 @@ import 'package:flutter_api_getx_matjer/view/screen/product_details_secreen.dart
 import 'package:flutter_api_getx_matjer/view/widget/text_utils.dart';
 import 'package:get/get.dart';
 
-class CardItem extends StatelessWidget {
-  CardItem({super.key});
+class CategoryItems extends StatelessWidget {
+  final String titleName;
+  CategoryItems({super.key, required this.titleName});
 
   final controller = Get.find<ProductController>();
   final controllerCart = Get.find<CardController>();
+  final catogreyControllerCart = Get.find<CatogreyController>();
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      if (controller.isLoding.value) {
-        return Center(
-          child: CircularProgressIndicator(
-            color: Get.isDarkMode ? pinkClr : mainColor,
+    return Scaffold(
+      backgroundColor: context.theme.scaffoldBackgroundColor,
+      appBar: AppBar(
+        title: Text(
+          titleName,
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
-        );
-      } else {
-        return Expanded(
-          child: controller.searchList.isEmpty &&
-                  controller.searchTextController.text.isNotEmpty
-              ? Get.isDarkMode
-                  ? Image.asset("2.1 images/images/search_empty_dark.png")
-                  : Image.asset("2.1 images/images/search_empry_light.png")
-              : GridView.builder(
-                  itemCount: controller.searchList.isEmpty
-                      ? controller.productList.length
-                      : controller.searchList.length,
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    childAspectRatio: 0.8,
-                    mainAxisSpacing: 9.0,
-                    crossAxisSpacing: 6.0,
-                    maxCrossAxisExtent: 200,
-                  ),
-                  itemBuilder: (context, index) {
-                    if (controller.searchList.isEmpty) {
-                      return buildCardItem(
-                        image: controller.productList[index].image,
-                        price: controller.productList[index].price,
-                        rate: controller.productList[index].rating.rate,
-                        productID: controller.productList[index].id,
-                        productModels: controller.productList[index],
-                        onTap: () {
-                          Get.to(
-                            () => ProductDetailsSecreen(
-                              productModels: controller.productList[index],
-                            ),
-                          );
-                        },
-                      );
-                    } else {
-                      return buildCardItem(
-                        image: controller.searchList[index].image,
-                        price: controller.searchList[index].price,
-                        rate: controller.searchList[index].rating.rate,
-                        productID: controller.searchList[index].id,
-                        productModels: controller.searchList[index],
-                        onTap: () {
-                          Get.to(
-                            () => ProductDetailsSecreen(
-                              productModels: controller.searchList[index],
-                            ),
-                          );
-                        },
-                      );
-                    }
-                  }),
-        );
-      }
-    });
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+            size: 30,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
+      ),
+      body: Obx(() {
+        if (catogreyControllerCart.isAllCatogrey.value) {
+          return Center(
+            child: CircularProgressIndicator(
+              color: Get.isDarkMode ? pinkClr : mainColor,
+            ),
+          );
+        } else {
+          return GridView.builder(
+              itemCount: catogreyControllerCart.catogreyMyList.length,
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                childAspectRatio: 0.8,
+                mainAxisSpacing: 9.0,
+                crossAxisSpacing: 6.0,
+                maxCrossAxisExtent: 200,
+              ),
+              itemBuilder: (context, index) {
+                return buildCardItem(
+                  image: catogreyControllerCart.catogreyMyList[index].image,
+                  price: catogreyControllerCart.catogreyMyList[index].price,
+                  rate:
+                      catogreyControllerCart.catogreyMyList[index].rating.rate,
+                  productID: catogreyControllerCart.catogreyMyList[index].id,
+                  productModels: catogreyControllerCart.catogreyMyList[index],
+                  onTap: () {
+                    Get.to(
+                      () => ProductDetailsSecreen(
+                        productModels:
+                            catogreyControllerCart.catogreyMyList[index],
+                      ),
+                    );
+                  },
+                );
+              });
+        }
+      }),
+    );
   }
 
   Widget buildCardItem({

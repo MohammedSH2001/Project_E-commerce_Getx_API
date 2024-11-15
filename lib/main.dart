@@ -2,8 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_api_getx_matjer/firebase_options.dart';
+import 'package:flutter_api_getx_matjer/language/localaiztion.dart';
 import 'package:flutter_api_getx_matjer/logic/controller/theme_controller.dart';
 import 'package:flutter_api_getx_matjer/routes/routes.dart';
+import 'package:flutter_api_getx_matjer/utils/my_validation_string.dart';
 import 'package:flutter_api_getx_matjer/utils/them.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -23,7 +25,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+
       debugShowCheckedModeBanner: false,
+      locale: Locale(GetStorage().read("lang").toString()),
+      translations: LocalaiztionApp(),
+      fallbackLocale: Locale(eng),
       theme: ThemeApp.light,
       darkTheme: ThemeApp.dart,
       themeMode: ThemeController().themeDataGet,

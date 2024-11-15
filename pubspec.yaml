@@ -49,6 +49,8 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   # flutter_simple_rating_bar: ^0.0.3
   readmore: ^3.0.0
+  geolocator: ^13.0.2
+  geocoding: ^3.0.0
 
 dev_dependencies:
   flutter_test:

@@ -7,6 +7,7 @@ import 'package:flutter_api_getx_matjer/view/screen/auth/login_screen.dart';
 import 'package:flutter_api_getx_matjer/view/screen/auth/signup_screen.dart';
 import 'package:flutter_api_getx_matjer/view/screen/card_secreen.dart';
 import 'package:flutter_api_getx_matjer/view/screen/main_secreen.dart';
+import 'package:flutter_api_getx_matjer/view/screen/pay_ment_secreen.dart';
 import 'package:flutter_api_getx_matjer/view/screen/welcome_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
@@ -42,10 +43,22 @@ class AppRoutes {
       MainBinding(),
       ProductBinding(),
     ]),
-    GetPage(name: Routes.cardSecreen, page: () => CardSecreen(), bindings: [
-      AuthBinding(),
-      ProductBinding(),
-    ]),
+    GetPage(
+      name: Routes.cardSecreen,
+      page: () => CardSecreen(),
+      bindings: [
+        AuthBinding(),
+        ProductBinding(),
+      ],
+    ),
+    GetPage(
+        name: Routes.payMentSecreen,
+        page: () => PayMentSecreen(),
+        bindings: [
+          AuthBinding(),
+          ProductBinding(),
+          MainBinding(),
+        ]),
   ];
 }
 
@@ -56,4 +69,5 @@ class Routes {
   static const forgotPasswordSecreen = '/forgotPasswordSecreen';
   static const mainSecreen = '/mainSecreen';
   static const cardSecreen = '/cardSecreen';
+  static const payMentSecreen = '/payMentSecreen';
 }
