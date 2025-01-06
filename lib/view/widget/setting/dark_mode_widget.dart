@@ -15,7 +15,7 @@ class DarkModeWidget extends StatelessWidget {
           children: [
             buildIconWidget(),
             Switch(
-              activeTrackColor: Get.isDarkMode?pinkClr:mainColor,
+              activeTrackColor: Get.isDarkMode ? pinkClr : mainColor,
               // activeColor: Get.isDarkMode?pinkClr:mainColor,
               value: controller.switchValue.value,
               onChanged: (value) {
@@ -33,16 +33,14 @@ class DarkModeWidget extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(
-              6,
-            ),
+            padding: EdgeInsets.all(6),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: darkSettings,
             ),
             child: const Icon(
               Icons.dark_mode,
-              color: Colors.white,
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
           ),
           const SizedBox(
@@ -53,7 +51,7 @@ class DarkModeWidget extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Get.isDarkMode ? Colors.white : Colors.black,
-          )
+          ),
         ],
       ),
     );
