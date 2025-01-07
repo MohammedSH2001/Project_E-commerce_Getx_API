@@ -9,6 +9,6 @@ const Map<String, String> ar = {
   "Catogrey": "تصنيفات",
   "Favorites": "مفضلة",
   "Setting": "الاعدادات",
-    "Find Your":"ابحث عن",
+  "Find Your":"ابحث عن",
   "INSPIRATOIN":"إلهامك",
 };

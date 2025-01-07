@@ -58,6 +58,18 @@ class SettingSecreen extends StatelessWidget {
             height: 20,
           ),
           HelpWidget(),
+          const SizedBox(
+            height: 120,
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: TextUtils(
+              text: "By Mohammed ALshawish",
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          )
         ],
       ),
     );
