@@ -3,6 +3,7 @@ import 'package:flutter_api_getx_matjer/utils/them.dart';
 import 'package:flutter_api_getx_matjer/view/widget/profile_widget.dart';
 import 'package:flutter_api_getx_matjer/view/widget/setting/about.dart';
 import 'package:flutter_api_getx_matjer/view/widget/setting/dark_mode_widget.dart';
+import 'package:flutter_api_getx_matjer/view/widget/setting/help_widget.dart';
 import 'package:flutter_api_getx_matjer/view/widget/setting/language_widget.dart';
 import 'package:flutter_api_getx_matjer/view/widget/setting/log_out_widget.dart';
 import 'package:flutter_api_getx_matjer/view/widget/text_utils.dart';
@@ -53,6 +54,10 @@ class SettingSecreen extends StatelessWidget {
             height: 20,
           ),
           About(),
+          const SizedBox(
+            height: 20,
+          ),
+          HelpWidget(),
         ],
       ),
     );
