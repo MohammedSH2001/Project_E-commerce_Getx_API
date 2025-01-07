@@ -67,7 +67,7 @@ class SettingSecreen extends StatelessWidget {
               text: "By Mohammed ALshawish",
               fontSize: 17,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              color:Get.isDarkMode?Colors.white: Colors.black,
             ),
           )
         ],
