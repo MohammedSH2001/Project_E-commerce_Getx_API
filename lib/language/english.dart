@@ -3,6 +3,8 @@ const Map<String, String> en = {
   "Dark Mode": "Dark Mode",
   "Language": "Language",
   "Logout": "Logout",
+  "About":"About",
+  "Help":"Help",
   "Suiko Shop": "Suiko Shop",
   "Catogrey": "Catogrey",
   "Favorites": "Favorites",

@@ -3,6 +3,8 @@ const Map<String, String> ar = {
   "Dark Mode": "الوضع الداكن",
   "Language": "اللغة",
   "Logout": "تسجيل خروح",
+  "About": "حول",
+  "Help":"مساعدة",
   "Suiko Shop": "Suiko Shop",
   "Catogrey": "تصنيفات",
   "Favorites": "مفضلة",
