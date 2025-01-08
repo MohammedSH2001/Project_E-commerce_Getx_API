@@ -11,4 +11,5 @@ const Map<String, String> en = {
   "Setting": "Setting",
   "Find Your":"Find Your",
   "INSPIRATOIN":"INSPIRATOIN",
+  "By Mohammed ALshawish":"By Mohammed ALshawish"
 };

@@ -64,7 +64,7 @@ class SettingSecreen extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: TextUtils(
-              text: "By Mohammed ALshawish",
+              text: "By Mohammed ALshawish".tr,
               fontSize: 17,
               fontWeight: FontWeight.bold,
               color:Get.isDarkMode?Colors.white: Colors.black,

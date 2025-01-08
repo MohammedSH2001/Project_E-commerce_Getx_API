@@ -11,4 +11,5 @@ const Map<String, String> ar = {
   "Setting": "الاعدادات",
   "Find Your":"ابحث عن",
   "INSPIRATOIN":"إلهامك",
+  "By Mohammed ALshawish":"بواسطة محمد الشاوش"
 };
