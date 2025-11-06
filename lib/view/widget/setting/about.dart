@@ -25,7 +25,7 @@ class About extends StatelessWidget {
               color: Colors.white,
             ),
             backgroundColor: Get.isDarkMode ? pinkClr : mainColor,
-            textCancel: "Tankes",
+            textCancel: "Thanks",
             cancelTextColor: Colors.white,
             onCancel: () {
               Get.back();
