@@ -12,9 +12,9 @@ class About extends StatelessWidget {
       onTap: () {
         BorderRadius.circular(22);
         Get.defaultDialog(
-            title: "logout from App",
+            title: "logout From App",
             titleStyle: const TextStyle(
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
