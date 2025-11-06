@@ -18,7 +18,7 @@ class About extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
-            middleText: "Are you sure you need to logout",
+            middleText: "Are You Sure You Need to Logout",
             middleTextStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
