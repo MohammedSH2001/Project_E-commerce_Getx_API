@@ -3,8 +3,8 @@ import 'package:flutter_api_getx_matjer/utils/them.dart';
 import 'package:flutter_api_getx_matjer/view/widget/text_utils.dart';
 import 'package:get/get.dart';
 
-class About extends StatelessWidget {
-  const About({super.key});
+class HelpWidget extends StatelessWidget {
+  const HelpWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +12,20 @@ class About extends StatelessWidget {
       onTap: () {
         BorderRadius.circular(22);
         Get.defaultDialog(
-            title: "logout From App",
+            title: "Help from App",
             titleStyle: const TextStyle(
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
-            middleText: "Are You Sure You Need to Logout",
+            middleText: "قيد التطوير",
             middleTextStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
             backgroundColor: Get.isDarkMode ? pinkClr : mainColor,
-            textCancel: "Thanks",
+            textCancel: "Tankes",
             cancelTextColor: Colors.white,
             onCancel: () {
               Get.back();
@@ -40,10 +40,10 @@ class About extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: const Color.fromARGB(255, 245, 129, 12),
+              color: const Color.fromARGB(255, 90, 245, 12),
             ),
             child: const Icon(
-              Icons.wb_incandescent_outlined,
+              Icons.help_outline,
               color: Colors.white,
             ),
           ),
@@ -51,7 +51,7 @@ class About extends StatelessWidget {
             width: 20,
           ),
           TextUtils(
-            text: "About".tr,
+            text: "Help".tr,
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Get.isDarkMode ? Colors.white : Colors.black,
